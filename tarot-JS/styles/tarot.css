@@ -6,12 +6,17 @@ body{
 #container{
   text-align: center;
   background-color: #6c2d75;
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 1rem;
-  position: relative;
+  position: absolute;
   top: 0;
+}
+
+div.container{
+  display: inline;
+  margin: 0 auto;
 }
 
 h1{
@@ -20,17 +25,55 @@ h1{
   font-size: 2.5rem;
 }
 
-#display{
+h2{
+  color: goldenrod;
+  font-family: Ranchers, cursive;
+  letter-spacing: 2px;
+}
+
+h3{
+  color: white;
+  font-family: Ranchers, cursive;
+  letter-spacing: 2px;
+}
+
+#display1 { 
+  /* float:left;   */
+  margin: 0 auto;
+  background:Red; 
+  width:33%; 
+  height:230px; 
+} 
+#display2{ 
+  /* float:left;   */
+  margin: 0 auto;
+  background:Green; 
+  width:33%; 
+  height:230px; 
+} 
+#display3{ 
+  /* float:right;  */
+  margin: auto;
+  background:blue; 
+  width:33%; 
+  height:230px; 
+}
+
+/* #display{
   width: 40vw;
   min-height: 70vh;
   margin: 0 auto;
   background-color: rgba(255,255,255,0.6);
   text-align: center;
   padding: 1rem;
-}
+} */
 
-#display > img{
-  width: 20rem;
+#display1 > img,
+#display2 > img,
+#display3 > img
+{
+  width: 4.3em;
+  border: 2px solid black; 
 }
 
 #display > p {

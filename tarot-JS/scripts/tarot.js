@@ -87,13 +87,33 @@ var deck = [
 ];
 
 function getRandom(num){
-  var randomNumber = Math.floor(Math.random() * num);
+  var randomNumber = Math.floor(Math.random() * num)+1;
   return randomNumber;
 }
 
-document.getElementById("draw").onclick = function(){
-  var index = getRandom(78);
-  var currentCard = deck[index];
 
-  document.getElementById("display").innerHTML = '<img src="images/' + currentCard.image + '.jpg"><h3>' + currentCard.name + '</h3><p>' + currentCard.description + '</p>';
+document.getElementById("draw").onclick = function(){
+  var currentCard =[];
+  for( let i = 1; i <= 3; i++){
+    var index = getRandom(78);
+    currentCard[i] = deck[index];
+    // if ( i == 2){
+    //   if (currentCard[i] == currentCard[i-1]){
+    //     i--;
+    //   }
+    //   continue;
+    // } else if (i = 3) {
+    //   if (currentCard[i] == currentCard[i-1] || currentCard[i] == currentCard[i-2]){
+    //     i--;
+    //   }
+    //   continue;
+    // }
+    console.log(currentCard[i])
+
+    
+
+  };
+  document.getElementById("display1").innerHTML = '<h2>PAST</h2><img src="images/' + currentCard[1].image + '.jpg"><h3>' + currentCard[1].name + '</h3><p>' + currentCard[1].description + '</p>';
+  document.getElementById("display2").innerHTML = '<h2>PRESENT</h2><img src="images/' + currentCard[2].image + '.jpg"><h3>' + currentCard[2].name + '</h3><p>' + currentCard[2].description + '</p>';
+  document.getElementById("display3").innerHTML = '<h2>FUTURE</h2><img src="images/' + currentCard[3].image + '.jpg"><h3>' + currentCard[3].name + '</h3><p>' + currentCard[3].description + '</p>';
 };
