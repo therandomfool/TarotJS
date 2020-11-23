@@ -96,3 +96,9 @@ h3{
   font-family: Ranchers, cursive;
   letter-spacing: 2px;
 }
+
+button:hover
+{
+  color: white;
+  background-color: crimson !important;
+}
